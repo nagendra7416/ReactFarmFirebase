@@ -1,0 +1,892 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+body::-webkit-scrollbar
+{
+    width: 0;
+}
+body
+{
+    overflow-y: scroll;
+}
+
+nav 
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8c027;
+    overflow: hidden;
+    z-index: 100000;
+}
+nav .inner 
+{
+    width: 95%;
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav .left 
+{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-left: 20px;
+}
+nav .left .menu
+{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+nav .left .menu button
+{
+    width: 35px;
+    height: 35px;
+    min-width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+nav .left .menu button svg 
+{
+    width: 24px;
+    height: 24px;
+}
+nav .left .logo
+{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+nav .left .logo a 
+{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+nav .left .logo img 
+{
+    height: 40px;
+}
+
+nav .right 
+{
+    height: 100%;
+    margin-right: 20px;
+}
+nav .right .links 
+{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+nav .right .links ul 
+{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+nav .right .links ul li
+{
+    margin-left: 10px;
+}
+nav .right .links ul li a 
+{
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-decoration: none;
+}
+nav .right .links ul li a svg 
+{
+    width: 24px;
+    height: 24px;
+}
+nav .right .links ul li a label
+{
+    position: absolute;
+    left: 50%;
+    top: 0;
+    min-width: none;
+    padding: 0 5px;
+    min-height: 16px;
+    border-radius: 20px;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    pointer-events: none;
+    font-size: 12px;
+}
+nav .right .links ul li a img 
+{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+nav .right .links ul li button
+{
+    /* height: 30px; */
+    padding: 0 20px;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: .5px solid black;
+    color: black;
+    border-radius: 50px;
+}
+nav .right .links ul li button a 
+{
+    color: black;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+.slider-container
+{
+    margin-top: 70px;
+    width: 95%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+.slider-container .slider 
+{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    transition: transform 0.5s ease-in-out;
+}
+.slider-container .slider .img 
+{
+    min-width: 100%;
+    min-height: calc(30vw - 10px);
+    cursor: pointer;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.productscon
+{
+    width: 95%;
+    max-width: 1000px;
+    margin: 0 auto;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.productscon h2 
+{
+    width: 96%;
+    margin: 15px 0px 10px 0px;
+}
+.productscon .products 
+{
+    width: 96%;
+    height: auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    grid-template-rows: auto;
+    grid-gap: 10px;
+    grid-column-gap: 15px;
+}
+
+.productscon .products .product 
+{
+    width: 100%;
+    position: relative;
+}
+.productscon .products .product .product-img 
+{
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.productscon .products .product .product-img label 
+{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 12px;
+    padding: 2px 8px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+.productscon .products .product .product-img a 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.productscon .products .product .product-img img 
+{
+    width: 100%;
+    min-width: 100%;
+}
+
+.productscon .products .product .product-detail 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.productscon .products .product .product-detail button
+{
+    margin: 10px 0 0 0;
+    padding: 8px 16px;
+    background: black;
+    border-radius: 30px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.cartcon
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cartcon h2 
+{
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.cartcon .inner 
+{
+    width: 95%;
+    max-width: 1000px;
+    display: flex;
+    align-items: flex-start;
+    margin-top: 40px;
+}
+.cartcon .inner .cartleft
+{
+    width: 70%;
+    min-width: 480px;
+}
+.cartcon .inner .cartleft .items
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.cartcon .inner .cartleft .items .item 
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.cartcon .inner .cartleft .items .item .productname
+{
+    width: 60%;
+}
+.cartcon .inner .cartleft .items .item .quantity
+{
+    width: 20%;
+}
+.cartcon .inner .cartleft .items .item .total
+{
+    width: 20%;
+}
+.cartcon .inner .cartleft .items .item.header
+{
+    border-bottom: .5px solid lightgray;
+}
+.cartcon .inner .cartleft .items .item.i .productname:first-child
+{
+    margin-top: 30px;
+}
+.cartcon .inner .cartleft .items .item.header .productname, .quantity, .total
+{
+    height: 40px;
+    font-weight: 600;
+}
+.cartcon .inner .cartleft .items .item.i 
+{
+    height: 100px;
+    margin-bottom: 10px;
+}
+.cartcon .inner .cartleft .items .item .productname .productinner
+{
+    display: flex;
+    align-items: flex-start;
+}
+.cartcon .inner .cartleft .items .item .productname .productinner .innerimg 
+{
+    width: 100px;
+    height: 100px;
+    min-width: 100px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+.cartcon .inner .cartleft .items .item .productname .productinner .innerimg img 
+{
+    width: 100%;
+}
+.cartcon .inner .cartleft .items .item .productname .productinner .innerdetail 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.cartcon .inner .cartleft .items .item .productname .productinner .innerdetail label 
+{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+.cartcon .inner .cartleft .items .item .productname .productinner .innerdetail div span 
+{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+.cartcon .inner .cartleft .items .item.i .quantity
+{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.cartcon .inner .cartleft .items .item .quantity .actions
+{
+    display: flex;
+    align-items: center;
+}
+.cartcon .inner .cartleft .items .item .quantity .actions button 
+{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+    background: none;
+    border: none;
+}
+.cartcon .inner .cartleft .items .item .quantity .actions label 
+{
+    margin: 0 10px;
+}
+
+.cartcon .inner .cartleft .items .item.i .total
+{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+}
+
+
+
+
+
+
+.cartcon .inner .cartright
+{
+    width: 30%;
+}
+.cartcon .inner .cartright .cartrightinner
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.cartcon .inner .cartright .cartrightinner div 
+{
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.cartcon .inner .cartright .cartrightinner .total label
+{
+    font-weight: 700;
+}
+.cartcon .inner .cartright .cartrightinner button
+{
+    padding: 8px 20px;
+    border-radius: 40px;
+    border: none;
+    background: #f7b708;
+    color: black;
+    cursor: pointer;
+}
+.cartcon .inner .cartright .cartrightinner button a 
+{
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.banner 
+{
+    width: 100%;
+    height: 250px;
+    margin-top: 20px;
+    background-image: url('https://vaaradhifarms.com/cdn/shop/files/midjourneyexpert_white_indian_desi_cow_standing_next_to_a_small_26e9dd34-2704-41bc-8611-96d3fc2fd338.png?v=1690866620&width=1200');
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.navbar
+{
+    width: 100%;
+    height: 80px;
+    border-bottom: .5px solid lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navbar .inner 
+{
+    width: 95%;
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    /* background: red; */
+    justify-content: space-between;
+}
+
+.navbar .inner .center img 
+{
+    width: 40px;
+    user-select: none;
+}
+.navbar .inner .right svg 
+{
+    opacity: 0;
+}
+
+
+
+.checkoutcon
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.checkoutcon .inner
+{
+    width: 95%;
+    max-width: 1000px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.checkoutcon .inner .checkleft 
+{
+    width: 60%;
+}
+.checkoutcon .inner .checkleft .checkleftinner 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.checkoutcon .inner .checkleft .checkleftinner h3 
+{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.checkoutcon .inner .checkleft .checkleftinner .box 
+{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.checkoutcon .inner .checkleft .checkleftinner .box.name 
+{
+    border: none;
+}
+.checkoutcon .inner .checkleft .checkleftinner .box.name .box
+{
+    flex-grow: 1;
+    margin-right: 5px;
+}
+.checkoutcon .inner .checkleft .checkleftinner .box input[type="text"], input[type="number"]
+{
+    width: calc(100% - 10px);
+    height: calc(100% - 2px);
+    padding-left: 10px;
+    outline: none;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+}
+.checkoutcon .inner .checkleft .checkleftinner .box.citystatepin 
+{
+    border: none;
+}
+.checkoutcon .inner .checkleft .checkleftinner .box input[type="text"]:focus, input[type="number"]:focus
+{
+    border: 1px solid black;
+}
+.checkoutcon .inner .checkleft .checkleftinner div 
+{
+    display: flex;
+    align-items: flex-start;
+}
+.checkoutcon .inner .checkleft .checkleftinner div div input 
+{
+    width: calc(100% + 10px);
+}
+.checkoutcon .inner .checkleft .checkleftinner .box.citystatepin .box
+{
+    flex-grow: 1;
+    margin-right: 5px;
+}
+.checkoutcon .inner .checkleft .checkleftinner .cashondelivery
+{
+    display: flex;
+    align-items: center;
+}
+.checkoutcon .inner .checkleft .checkleftinner .cashondelivery label 
+{
+    margin-left: 5px;
+}
+.checkoutcon .inner .checkleft .checkleftinner .placeorder button
+{
+    padding: 10px 24px;
+    border: none;
+    background: black;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+.checkoutcon .inner .checkright
+{
+    width: 40%;
+}
+.checkoutcon .inner .checkright .checkrightinner
+{
+    padding: 30px 0px 30px 30px;
+}
+.checkoutcon .inner .checkright .checkrightinner .checkoutitems 
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.checkoutcon .inner .checkright .checkrightinner .checkoutitems  .checkoutitem 
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.checkoutcon .inner .checkright .checkrightinner .checkoutitems  .checkoutitem .checkoutleft
+{
+    display: flex;
+    align-items: center;
+}
+.checkoutcon .inner .checkright .checkrightinner .checkoutitems  .checkoutitem .checkoutleft .checkoutimg 
+{
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    border-radius: 4px;
+    margin-right: 8px;
+    position: relative;
+    background: whitesmoke;
+}
+.checkoutcon .inner .checkright .checkrightinner .checkoutitems  .checkoutitem .checkoutleft .checkoutimg label 
+{
+    position: absolute;
+    top: -6px;
+    left: 80%;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    border-radius: 30px;
+    font-size: 12px;
+    padding: 3px 6px;
+}
+.checkoutcon .inner .checkright .checkrightinner .checkoutitems  .checkoutitem .checkoutleft .checkoutimg img 
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+}
+.checkoutcon .inner .checkright .checkrightinner .checkoutitems  .checkoutitem .checkoutleft .checkoutdetail 
+{
+    font-size: 13px;
+}
+.checkoutcon .inner .checkright .checkrightinner .checkoutitems  .checkoutitem .checkoutright 
+{
+    font-size: 11px;
+}
+
+.checkoutcon .inner .checkright .checkrightinner .checkouttotal
+{
+    width: 100%;
+}
+.checkoutcon .inner .checkright .checkrightinner .checkouttotal div 
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.checkoutcon .inner .checkright .checkrightinner .checkouttotal div label
+{
+    font-size: 13px;
+}
+.checkoutcon .inner .checkright .checkrightinner .checkouttotal div span 
+{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+
+@media screen and (max-width: 683px){
+    .checkoutcon .inner
+    {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .checkoutcon .inner .checkright
+    {
+        width: 60%;
+    }
+    .checkoutcon .inner .checkleft
+    {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ordersuccessnotif 
+{
+    width: 100%;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.ordersuccessnotif svg 
+{
+    width: 70px;
+    height: 70px;
+    fill: #00a411;
+    margin-bottom: 10px;
+}
+.ordersuccessnotif .note 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ordersuccessnotif .note label 
+{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.ordersuccessnotif .note label span 
+{
+    text-transform: uppercase;
+    color: #00a411;
+}
+
+
+.orderdetails
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.orderdetails h3 
+{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.orderdetails table 
+{
+    width: 100%;
+    border: .5px solid lightgray;
+}
+.orderdetails table tr 
+{
+    height: 30px;
+}
+.orderdetails table tr th 
+{
+    text-align: left;
+}
+.orderdetails table tr label 
+{
+    margin-left: 10px;
+}
+
+
+
+
+.orderdetails table .orderimg 
+{
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    margin: 8px 0;
+}
+.orderdetails table .orderimg img 
+{
+    width: 100%;
+}
+
+
+#shippingaddress tr td label 
+{
+    margin-bottom: 5px;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1000px){
+    nav .inner
+    {
+        width: 100%;
+        max-width: none;
+    }
+    .slider-container
+    {
+        width: 100%;
+        max-width: none;
+    }
+    .productscon
+    {
+        width: 100%;
+        max-width: none;
+    }
+}
